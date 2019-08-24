@@ -235,7 +235,7 @@ figure {
 #colorlib-hero {
   color: #fff;
   min-height: 500px;
-  background: #424242 url(../images/loader.gif) no-repeat center center;
+  background: #2E2E2E url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left;
   margin-bottom: 2em;
