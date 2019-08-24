@@ -235,7 +235,7 @@ figure {
 #colorlib-hero {
   color: #fff;
   min-height: 500px;
-  background: #fff url(../images/loader.gif) no-repeat center center;
+  background: #2E2E2E url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left;
   margin-bottom: 2em;
@@ -355,7 +355,7 @@ body.offcanvas {
     -o-transform: translateX(0);
     transform: translateX(0);
     width: 300px;
-    background: #f2f3f7;
+    background: #8a8484;
     z-index: 999;
     position: fixed; }
   body.offcanvas #colorlib-main, body.offcanvas .colorlib-nav-toggle {
@@ -847,7 +847,7 @@ body.offcanvas {
     height: 100px;
     display: table;
     text-align: center;
-    background: #f2f3f7;
+    background: #8a8484;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
