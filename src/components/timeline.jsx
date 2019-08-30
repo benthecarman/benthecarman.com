@@ -23,7 +23,7 @@ export default class Timeline extends Component {
                       <div className="timeline-label">
                         <h2>Present</h2>
                         <p>
-                          Currently finishing my degree in Computer Science.  I currently work for my university doing web development, as well as, 
+                          Currently finishing my degree in Computer Science.  I currently work for my university doing web development, as well as,
                           in my free time I contribute to open source projects. I am hoping to graduate and go on to work somewhere that shares my values
                           and I can make an impact at.
                         </p>
@@ -69,7 +69,7 @@ export default class Timeline extends Component {
                       <div className="timeline-label">
                         <h2>Introduction to Bitcoin <span>November 2017</span></h2>
                         <p>
-                          I found Bitcoin through a comedy podcast, afterwards I took a hard look at it and instantly fell in love with it.  I spent countless nights 
+                          I found Bitcoin through a comedy podcast, afterwards I took a hard look at it and instantly fell in love with it.  I spent countless nights
                           staying up to watch lectures done by core developers and reading articles to absorb as much information as I could.  Since then, I have still committed
                           most of my free time to learning about Bitcoin and everything surrounding it, from economics to distributed systems, and hope to make an impact in the space.
                         </p>
