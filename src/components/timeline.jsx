@@ -54,10 +54,9 @@ export default class Timeline extends Component {
                       <div className="timeline-label">
                         <h2>Begin Web Development Internship <span>May 2018</span></h2>
                         <p>
-                          After I felt I had a solid grasp of the surrounding ecosystem around Bitcoin I felt I could begin contributing to the project.
-                          I made <a href="https://github.com/bitcoin/bitcoin/pull/14974">my first pull request</a> to the bitcoin core repo and realized that I
-                          had much more to learn.  I spent some time improving my skills and learning and I am now a working directly on Wasabi Wallet.  I still
-                          have so much to learn about programming, Bitcoin, and OSS but I am learning everyday and working to better myself and the world.
+                          At the beginning of the summer of 2018 I was hired to work as a web developer for my university.  I started out learning basic PHP and
+                          other basic systems (SQL, Git, Unix) and learned quickly. After I completed my training I was moved onto some projects and have been working
+                          here ever since.  I enjoy this job and love be able to come in and program everyday while being paid for it!
                         </p>
                       </div>
                     </div>
