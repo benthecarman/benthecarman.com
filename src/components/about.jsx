@@ -35,7 +35,7 @@ export default class About extends Component {
                 </div>
             </div>
             <div className="row row-pt-md">
-                <div className="col-md-4 text-center animate-box">
+				<div className="col-md-3 text-center animate-box">
                     <div className="services color-7">
                         <span className="icon">
                             <img src="images/wasabi.png" alt="Wasabi Wallet" height="45" width="50"/>
@@ -46,7 +46,7 @@ export default class About extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4 text-center animate-box">
+                <div className="col-md-3 text-center animate-box">
                     <div className="services color-3">
                         <span className="icon">
                             <img src="images/LightningRod.svg" alt="Lightning Rod" height="50" width="50"/>
@@ -58,7 +58,7 @@ export default class About extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4 text-center animate-box">
+                <div className="col-md-3 text-center animate-box">
                     <div className="services color-1">
                         <span className="icon">
                             <img src="images/bitcoin.svg" alt="Bitcoin" height="50" width="50"/>
@@ -66,6 +66,17 @@ export default class About extends Component {
                         <div className="desc">
                             <h3><a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a></h3>
                             <p>Bitcoin uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network.</p>
+                        </div>
+                    </div>
+                </div>
+				<div className="col-md-3 text-center animate-box">
+                    <div className="services color-7">
+                        <span className="icon">
+                            <img src="images/bitcoin-s.png" alt="bitcoin-s" height="45" width="50"/>
+                        </span>
+                        <div className="desc">
+                            <h3><a href="https://github.com/bitcoin-s/bitcoin-s">bitcoin-s</a></h3>
+                            <p>Feature rich toolkit for making Bitcoin and Lightning applications on the JVM.</p>
                         </div>
                     </div>
                 </div>

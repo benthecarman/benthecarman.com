@@ -15,21 +15,21 @@ export default class Timeline extends Component {
             <div className="row">
               <div className="col-md-12">
                 <div className="timeline-centered">
-                  <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+				  <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
                     <div className="timeline-entry-inner">
                       <div className="timeline-icon color-3">
                         <i className="icon-pen2" />
                       </div>
                       <div className="timeline-label">
-                        <h2>Present</h2>
+                        <h2>Started at Suredbits <span>November 2019</span></h2>
                         <p>
-                          Currently finishing my degree in Computer Science.  I currently work for my university doing web development, as well as,
-                          in my free time I contribute to open source projects. I am hoping to graduate and go on to work somewhere that shares my values
-                          and I can make an impact at.
+                          I started working for <a href="https://www.suredbits.com">Suredbits</a> at the end of my college career. Starting at Suredbits was great but also very daunting.
+						  I was excited to start my first full time job but also was facing the challenges of being on my own for the first time all the while needing to get up to speed at
+						  my new job.  So far I have really enjoyed my time at Suredbits and hope to continue working with them for a while.
                         </p>
                       </div>
                     </div>
-                  </article>
+				  </article>
                   <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
                     <div className="timeline-entry-inner">
                       <div className="timeline-icon color-5">
@@ -40,7 +40,7 @@ export default class Timeline extends Component {
                         <p>
                           After I felt I had a solid grasp of the surrounding ecosystem around Bitcoin I felt I could begin contributing to the project.
                           I made <a href="https://github.com/bitcoin/bitcoin/pull/14974">my first pull request</a> to the bitcoin core repo and realized that I
-                          had much more to learn.  I spent some time improving my skills and learning and I am now a working directly on Wasabi Wallet.  I still
+                          had much more to learn.  I spent some time improving my skills and learning and I later went on to work directly on Wasabi Wallet.  I still
                           have so much to learn about programming, Bitcoin, and OSS but I am learning everyday and working to better myself and the world.
                         </p>
                       </div>
@@ -99,7 +99,7 @@ export default class Timeline extends Component {
                         <h2>Introduction to programming <span>August 2011</span></h2>
                         <p>
                           I took a computer programming class at my highschool.  Afterwards, I fell in love with it and continued to take computer related classes throughout my highschool career.
-                          In my free time I also learned to create basic python scripts to modifiy the game ToonTown Online. Since, then I've been hooked.
+                          In my free time I also learned to create basic python scripts to modifiy the game ToonTown Online. Since then, I've been hooked.
                         </p>
                       </div>
                     </div>
