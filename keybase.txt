@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/benthecarman
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://benthecarman.com
+  * I am benthecarman (https://keybase.io/benthecarman) on keybase.
+  * I have a public key ASD-p8hL-b1dueTXL3KfWbIxnYUCgvZZSx5JoSrt5guSoAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204fdee54c2e61925f2eedd370fb60a0a54b0c4d00e40636ec605dcd297dbbfffb0a",
+      "host": "keybase.io",
+      "kid": "0120fea7c84bf9bd5db9e4d72f729f59b2319d850282f6594b1e49a12aede60b92a00a",
+      "uid": "8483ace9ebc98c36fee700899ebcb719",
+      "username": "benthecarman"
+    },
+    "merkle_root": {
+      "ctime": 1583496159,
+      "hash": "72f6095f16c9c41f107f61d3f67817ebbb4b4254f0bc84c0b30ecde753965432cb6547d1839bc4aa6b43783f3d05845090c8c98db192dd66ecab626750365133",
+      "hash_meta": "2b5fd8d3444d7a15ba0e459e8864e37a229574e5324e1499c0c9b02f7b14e58c",
+      "seqno": 15075372
+    },
+    "service": {
+      "entropy": "oGNmdztF31qaoahskvNLW7jC",
+      "hostname": "benthecarman.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.2.1"
+  },
+  "ctime": 1583496172,
+  "expire_in": 504576000,
+  "prev": "37a480d6b8729806422477b2f61d8263b68f06b9389d0e7f509fd80f25073ab8",
+  "seqno": 87,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/qfIS/m9Xbnk1y9yn1myMZ2FAoL2WUseSaEq7eYLkqAKp3BheWxvYWTESpcCV8QgN6SA1rhymAZCJHey9h2CY7aPBrk4nQ5/UJ/YDyUHOrjEIGgHdLfM4lKDVau+LkSWSbAT71Zp0KxAxw6mfcDBxzDtAgHCo3NpZ8RAhdWVRDnheuME6n4ZJTmBYZiTXl86j/wnXX8R3YuT+6HBhBOyAnTxpXD1SIbhD32E0R47C6pyqWrUU6ozdhoLAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDV3qObo8ojFyEP5PLWiqhGE5g3SJ6rEq3HIFbZxfzVEo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/benthecarman
+
+==================================================================
