@@ -4,8 +4,10 @@
   "private": true,
   "homepage": "https://www.benthecarman.com",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-fontawesome": "^1.7.1",
     "react-scripts": "^2.1.8",
     "travis": "^0.1.1",
     "yarn": "^1.17.3"
