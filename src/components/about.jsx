@@ -15,9 +15,8 @@ export default class About extends Component {
                     <span className="heading-meta">Who Am I?</span>
                     <p>
                         I am Ben. I value freedom for all and believe privacy technologies like Bitcoin are the best way to achieve this.
-                        Currently, I am working towards this by working on projects like Wasabi to make this a reality. I am attending
-                        Iowa State University and studying Computer Science, by doing so I am learning all that I can to become a better
-                        programmer so I can help make this a reality as best as I can.
+                        Currently, I work at <a href="https://suredbits.com">Suredbits</a> where I am able to work with Bitcoin and hopefully,
+                        make it ready for the world to use it.
                     </p>
                     </div>
                 </div>
