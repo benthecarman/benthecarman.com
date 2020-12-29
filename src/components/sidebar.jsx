@@ -12,7 +12,7 @@ export default class Sidebar extends Component
           <aside id="colorlib-aside" className="border js-fullheight">
             <div className="text-center" style={{ verticalalign: 'middle' }}>
               <div className="author-img" style={{ backgroundImage: 'url(images/me.jpg)' }} />
-              <h1 id="colorlib-logo"><a href="index.html">Ben Carman</a></h1>
+              <h1 id="colorlib-logo"><a href="index.html">benthecarman</a></h1>
               <span className="email"><i className="icon-mail"></i><a style={{ color: '#424242', textDecoration: 'underline' }} href="mailto:benthecarman@live.com">benthecarman@live.com</a></span>
             </div>
             <nav id="colorlib-main-menu" role="navigation" className="navbar">
