@@ -6,36 +6,26 @@ export default class About extends Component
     {
         return (
             <div>
-                <section className="colorlib-about" data-section="about">
-                    <div className="colorlib-narrow-content">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                                    <div className="col-md-12">
-                                        <div className="about-desc">
-                                            <h2 className="colorlib-heading">About Me</h2>
-                                            <span className="heading-meta">Who Am I?</span>
-                                            <p>
-                                                I am Ben. I value freedom for all and believe privacy technologies like Bitcoin are the best way to achieve this.
-                        Currently, I work at <a href="https://suredbits.com">Suredbits</a> where I am able to work with Bitcoin and hopefully,
-                        make it ready for the world to use it.
-                    </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 <section className="colorlib-about" data-section="projects">
                     <div className="colorlib-narrow-content">
                         <div className="row">
                             <div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                                <h2 className="colorlib-heading">Current projects</h2>
+                                <h2 className="colorlib-heading">Open source projects</h2>
                                 <span className="heading-meta">I contribute and work on these projects</span>
                             </div>
                         </div>
                         <div className="row row-pt-md">
+                            <div className="col-md-4 text-center animate-box">
+                                <div className="services color-7">
+                                    <span className="icon">
+                                        <img src="images/bitcoin-s.png" alt="bitcoin-s" height="45" width="50" />
+                                    </span>
+                                    <div className="desc">
+                                        <h3><a href="https://github.com/bitcoin-s/bitcoin-s">bitcoin-s</a></h3>
+                                        <p>Feature rich toolkit for making Bitcoin and Lightning applications on the JVM.</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div className="col-md-4 text-center animate-box">
                                 <div className="services color-7">
                                     <span className="icon">
@@ -55,17 +45,6 @@ export default class About extends Component
                                     <div className="desc">
                                         <h3><a href="https://github.com/bitcoin/bitcoin">Bitcoin Core</a></h3>
                                         <p>Bitcoin uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 text-center animate-box">
-                                <div className="services color-7">
-                                    <span className="icon">
-                                        <img src="images/bitcoin-s.png" alt="bitcoin-s" height="45" width="50" />
-                                    </span>
-                                    <div className="desc">
-                                        <h3><a href="https://github.com/bitcoin-s/bitcoin-s">bitcoin-s</a></h3>
-                                        <p>Feature rich toolkit for making Bitcoin and Lightning applications on the JVM.</p>
                                     </div>
                                 </div>
                             </div>
@@ -99,11 +78,11 @@ export default class About extends Component
                             <div className="col-md-4 text-center animate-box">
                                 <div className="services color-3">
                                     <span className="icon">
-                                        <img src="images/LightningRod.svg" alt="Lightning Rod" height="50" width="50" />
+                                        <img src="images/ln-vortex.png" alt="Lightning Vortex" height="50" width="50" />
                                     </span>
                                     <div className="desc">
-                                        <h3><a href="https://github.com/benthecarman/Lightning-Rod">Lightning Rod</a></h3>
-                                        <p>Lightning Rod's aim is to have users be able to connect their lightning node to other users' Bitcoin full nodes.</p>
+                                        <h3><a href="https://github.com/benthecarman/ln-vortex">Lightning Vortex</a></h3>
+                                        <p>Still a secret...</p>
                                     </div>
                                 </div>
                             </div>
