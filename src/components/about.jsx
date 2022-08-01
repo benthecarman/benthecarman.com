@@ -27,17 +27,6 @@ export default class About extends Component
                                 </div>
                             </div>
                             <div className="col-md-4 text-center animate-box">
-                                <div className="services color-7">
-                                    <span className="icon">
-                                        <img src="images/wasabi.png" alt="Wasabi Wallet" height="45" width="50" />
-                                    </span>
-                                    <div className="desc">
-                                        <h3><a href="https://github.com/zkSNACKs/WalletWasabi">Wasabi Wallet</a></h3>
-                                        <p>Open-source, non-custodial, privacy focused Bitcoin wallet for Windows, Linux, and Mac. Built-in Tor, CoinJoin, and coin control features.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 text-center animate-box">
                                 <div className="services color-1">
                                     <span className="icon">
                                         <img src="images/bitcoin.svg" alt="Bitcoin" height="50" width="50" />
