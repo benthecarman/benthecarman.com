@@ -75,6 +75,17 @@ export default class About extends Component
                                     </div>
                                 </div>
                             </div>
+                            <div className="col-md-4 text-center animate-box">
+                                <div className="services color-6">
+                                    <span className="icon">
+                                        <img src="images/translnd.png" alt="TransLND" height="50" width="50" />
+                                    </span>
+                                    <div className="desc">
+                                        <h3><a href="https://github.com/benthecarman/translnd">TransLND</a></h3>
+                                        <p>Translnd allows you to have a rotating pub key for every lightning invoice. This is to give the user more privacy when receiving on lightning.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
