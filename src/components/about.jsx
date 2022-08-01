@@ -27,6 +27,17 @@ export default class About extends Component
                                 </div>
                             </div>
                             <div className="col-md-4 text-center animate-box">
+                                <div className="services color-3">
+                                    <span className="icon">
+                                        <img src="images/ln-vortex.png" alt="Lightning Vortex" height="50" width="50" />
+                                    </span>
+                                    <div className="desc">
+                                        <h3><a href="https://github.com/benthecarman/ln-vortex">Lightning Vortex</a></h3>
+                                        <p>Still a secret...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4 text-center animate-box">
                                 <div className="services color-1">
                                     <span className="icon">
                                         <img src="images/bitcoin.svg" alt="Bitcoin" height="50" width="50" />
@@ -61,17 +72,6 @@ export default class About extends Component
                                     <div className="desc">
                                         <h3><a href="https://github.com/benthecarman/PSBT-Toolkit">PSBT Toolkit</a></h3>
                                         <p>PSBT Toolkit aims to give you a nice gui that gives you functionality for PSBT interactions. There are functions to serve the Creator, Updater, Combiner, Input Finalizer, and Transaction Extractor roles, as well as some utility functions for transactions, and some generators for PSBTs, Transactions, and other Bitcoin data types.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 text-center animate-box">
-                                <div className="services color-3">
-                                    <span className="icon">
-                                        <img src="images/ln-vortex.png" alt="Lightning Vortex" height="50" width="50" />
-                                    </span>
-                                    <div className="desc">
-                                        <h3><a href="https://github.com/benthecarman/ln-vortex">Lightning Vortex</a></h3>
-                                        <p>Still a secret...</p>
                                     </div>
                                 </div>
                             </div>
