@@ -32,8 +32,8 @@ export default class About extends Component
                                         <img src="images/ln-vortex.png" alt="Lightning Vortex" height="50" width="50" />
                                     </span>
                                     <div className="desc">
-                                        <h3><a href="https://github.com/benthecarman/ln-vortex">Lightning Vortex</a></h3>
-                                        <p>Still a secret...</p>
+                                        <h3><a href="https://github.com/ln-vortex/ln-vortex">Vortex</a></h3>
+                                        <p>Lightning and Taproot enabled coinjoins.</p>
                                     </div>
                                 </div>
                             </div>
