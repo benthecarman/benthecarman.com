@@ -19,11 +19,11 @@ const projects = [
     tone: 'gold',
   },
   {
-    name: 'LDK Node',
-    eyebrow: 'Contributor',
-    description: 'A batteries-included Lightning node library for developers who want LDK without assembling every component.',
-    href: 'https://github.com/lightningdevkit/ldk-node',
-    tags: ['Rust', 'SDK', 'Self-custody'],
+    name: 'Mutinynet',
+    eyebrow: 'Bitcoin playground',
+    description: 'A public custom signet with 30-second blocks, a faucet, Lightning infrastructure, and experimental soft forks.',
+    href: 'https://mutinynet.com/',
+    tags: ['Signet', 'Lightning', 'Covenants'],
     tone: 'blue',
   },
   {
@@ -35,9 +35,9 @@ const projects = [
     tone: 'purple',
   },
   {
-    name: 'Nostr Wallet Connect',
-    eyebrow: 'Creator',
-    description: 'A Nostr Wallet Connect bridge for LND, bringing programmable Lightning payments to Nostr applications.',
+    name: 'NWC for LND',
+    eyebrow: 'Implementation',
+    description: 'An LND bridge implementing the Nostr Wallet Connect protocol for programmable payments in Nostr applications.',
     href: 'https://github.com/benthecarman/nostr-wallet-connect-lnd',
     tags: ['Nostr', 'Lightning', 'Rust'],
     tone: 'pink',
@@ -60,16 +60,16 @@ const history = [
     href: 'https://spiral.xyz/',
   },
   {
-    period: '2023 — 2024',
-    title: 'Co-founder & CTO, Mutiny Wallet',
-    copy: 'Built an open-source, self-custodial Lightning wallet that ran a node directly in the browser.',
-    href: 'https://blog.mutinywallet.com/introducing-mutiny/',
-  },
-  {
     period: '2024 — 2025',
     title: 'Covenant research, Taproot Wizards',
     copy: 'Explored new Bitcoin covenant designs and what they could unlock for wallets, scaling, and self-custody.',
     href: 'https://taprootwizards.com/',
+  },
+  {
+    period: '2023 — 2024',
+    title: 'Co-founder & CTO, Mutiny Wallet',
+    copy: 'Built an open-source, self-custodial Lightning wallet that ran a node directly in the browser.',
+    href: 'https://blog.mutinywallet.com/introducing-mutiny/',
   },
   {
     period: '2021 — 2023',

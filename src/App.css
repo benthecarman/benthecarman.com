@@ -1,11 +1,14 @@
 :root {
-  --ink: #171714;
-  --muted: #65645d;
-  --paper: #f4f1e9;
-  --card: #fbfaf6;
-  --line: rgba(23, 23, 20, 0.16);
-  --orange: #f7931a;
-  --green: #27755d;
+  color-scheme: dark;
+  --ink: #f2eee4;
+  --muted: #aaa79f;
+  --paper: #0d0f0e;
+  --card: #151816;
+  --surface: #1b1f1c;
+  --night: #070908;
+  --line: rgba(242, 238, 228, 0.14);
+  --orange: #ff9b27;
+  --green: #123d31;
 }
 
 * { box-sizing: border-box; }
@@ -31,7 +34,12 @@ svg {
   stroke-width: 1.6;
 }
 
-.site-shell { overflow: hidden; }
+.site-shell {
+  background:
+    radial-gradient(circle at 78% 6%, rgba(255, 155, 39, 0.055), transparent 24rem),
+    var(--paper);
+  overflow: hidden;
+}
 
 .site-header {
   align-items: center;
@@ -58,7 +66,7 @@ svg {
   align-items: center;
   background: var(--orange);
   border-radius: 50%;
-  color: #fff;
+  color: var(--night);
   display: inline-flex;
   font-size: 16px;
   height: 30px;
@@ -140,7 +148,7 @@ svg {
 .hero h1 em { color: var(--orange); font-weight: 400; }
 
 .hero-lede {
-  color: #46453f;
+  color: #c2beb5;
   font-size: 19px;
   line-height: 1.65;
   margin: 38px 0 0;
@@ -168,14 +176,14 @@ svg {
 }
 
 .button:hover { transform: translateY(-2px); }
-.button-primary { background: var(--ink); color: #fff; }
-.button-primary:hover { background: var(--orange); border-color: var(--orange); }
-.button-ghost:hover { background: #fff; }
+.button-primary { background: var(--orange); border-color: var(--orange); color: var(--night); }
+.button-primary:hover { background: #ffad4d; border-color: #ffad4d; }
+.button-ghost:hover { background: var(--surface); }
 
 .portrait-wrap {
   align-self: center;
   aspect-ratio: 0.84;
-  background: #dfd5bf;
+  background: #20251f;
   min-height: 480px;
   overflow: hidden;
   position: relative;
@@ -190,7 +198,7 @@ svg {
 }
 
 .portrait-grid {
-  background-image: linear-gradient(rgba(23, 23, 20, .08) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 23, 20, .08) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(242, 238, 228, .08) 1px, transparent 1px), linear-gradient(90deg, rgba(242, 238, 228, .08) 1px, transparent 1px);
   background-size: 34px 34px;
   inset: 0;
   position: absolute;
@@ -203,7 +211,7 @@ svg {
 .portrait-label {
   background: var(--orange);
   bottom: 20px;
-  color: #171714;
+  color: var(--night);
   display: flex;
   flex-direction: column;
   left: 20px;
@@ -217,8 +225,8 @@ svg {
 
 .ticker {
   align-items: center;
-  background: var(--ink);
-  color: #f8f5ed;
+  background: var(--night);
+  color: var(--ink);
   display: flex;
   font-size: 12px;
   font-weight: 800;
@@ -273,7 +281,7 @@ svg {
 
 .project-card:hover {
   background: var(--project-color);
-  box-shadow: 10px 10px 0 var(--ink);
+  box-shadow: 10px 10px 0 #000;
   color: var(--hover-color, #fff);
   transform: translate(-5px, -5px);
   z-index: 3;
@@ -281,10 +289,10 @@ svg {
 
 .project-card.orange { --project-color: #f7931a; --hover-color: #171714; }
 .project-card.gold { --project-color: #d9a926; --hover-color: #171714; }
-.project-card.blue { --project-color: #366a92; }
-.project-card.purple { --project-color: #705c87; }
-.project-card.pink { --project-color: #b75d78; }
-.project-card.green { --project-color: #32755f; }
+.project-card.blue { --project-color: #285b80; }
+.project-card.purple { --project-color: #624f79; }
+.project-card.pink { --project-color: #984b64; }
+.project-card.green { --project-color: #24624e; }
 
 .project-topline { align-items: center; display: flex; justify-content: space-between; }
 .project-number { color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
@@ -298,7 +306,7 @@ svg {
 .tag-list span { border: 1px solid currentColor; border-radius: 20px; font-size: 9px; font-weight: 800; letter-spacing: .09em; padding: 6px 10px; text-transform: uppercase; }
 
 .about-section {
-  background: #ddd3bd;
+  background: #19201d;
   display: grid;
   gap: 10vw;
   grid-template-columns: 1.1fr .9fr;
@@ -307,7 +315,7 @@ svg {
 }
 
 .about-section::after {
-  border: 1px solid rgba(23,23,20,.15);
+  border: 1px solid rgba(242,238,228,.12);
   border-radius: 50%;
   content: '';
   height: 440px;
@@ -337,7 +345,7 @@ svg {
   text-decoration: none;
   transition: background 160ms ease, padding 160ms ease;
 }
-.history-row:hover { background: #fff; padding-left: 24px; padding-right: 24px; }
+.history-row:hover { background: var(--surface); padding-left: 24px; padding-right: 24px; }
 .history-period { color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .history-detail { align-items: baseline; display: grid; gap: 30px; grid-template-columns: minmax(260px, .65fr) 1fr; }
 .history-detail strong { font-family: Georgia, serif; font-size: 23px; font-weight: 400; }
@@ -346,16 +354,16 @@ svg {
 
 .community {
   background: var(--green);
-  color: #f8f5ed;
+  color: var(--ink);
   padding: 120px max(56px, calc((100vw - 1328px) / 2));
 }
 .community .kicker { color: rgba(255,255,255,.66); }
 .community h2 { max-width: 850px; }
 .community > p:not(.kicker) { color: rgba(255,255,255,.72); font-size: 18px; line-height: 1.7; margin: 32px 0; max-width: 680px; }
-.button-light { background: #f8f5ed; border-color: #f8f5ed; color: var(--ink); }
+.button-light { background: var(--ink); border-color: var(--ink); color: var(--night); }
 .button-light:hover { background: var(--orange); border-color: var(--orange); }
 
-footer { background: var(--ink); color: #f8f5ed; padding: 100px max(56px, calc((100vw - 1328px) / 2)) 35px; }
+footer { background: var(--night); color: var(--ink); padding: 100px max(56px, calc((100vw - 1328px) / 2)) 35px; }
 .footer-cta { border-bottom: 1px solid rgba(255,255,255,.2); padding-bottom: 90px; }
 .footer-cta .kicker { color: rgba(255,255,255,.55); }
 .footer-cta > a { align-items: center; display: flex; font-family: Georgia, serif; font-size: clamp(45px, 6vw, 88px); gap: 24px; justify-content: space-between; letter-spacing: -.055em; text-decoration: none; }
@@ -363,7 +371,7 @@ footer { background: var(--ink); color: #f8f5ed; padding: 100px max(56px, calc((
 .footer-bottom { align-items: center; color: rgba(255,255,255,.55); display: flex; font-size: 11px; font-weight: 700; justify-content: space-between; letter-spacing: .08em; padding-top: 30px; text-transform: uppercase; }
 .social-links { display: flex; gap: 28px; }
 .social-links a { text-decoration: none; }
-.social-links a:hover { color: #fff; }
+.social-links a:hover { color: var(--ink); }
 
 @media (max-width: 980px) {
   .site-header { padding: 0 28px; }
