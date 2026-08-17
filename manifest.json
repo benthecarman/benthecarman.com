@@ -1,6 +1,6 @@
 {
-	"short_name": "personal",
-	"name": "Personal website made by benthecarman",
+	"short_name": "Ben Carman",
+	"name": "Ben Carman — Bitcoin & Lightning Developer",
 	"icons": [
 		{
 			"src": "favicon.ico",
@@ -10,15 +10,6 @@
 	],
 	"start_url": ".",
 	"display": "standalone",
-	"theme_color": "#000000",
-	"background_color": "#ffffff",
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"predeploy": "yarn run build",
-		"deploy": "gh-pages -d build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"homepage": "https://www.benthecarman.com"
+	"theme_color": "#171714",
+	"background_color": "#f4f1e9"
 }
