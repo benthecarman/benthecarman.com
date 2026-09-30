@@ -1,5 +1,4 @@
 html {
-  background: #0d0f0e;
   text-rendering: optimizeLegibility;
 }
 
@@ -9,11 +8,11 @@ body {
 }
 
 ::selection {
-  background: #ff9b27;
-  color: #070908;
+  background: var(--accent);
+  color: var(--bg);
 }
 
 :focus-visible {
-  outline: 3px solid #ff9b27;
-  outline-offset: 4px;
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }

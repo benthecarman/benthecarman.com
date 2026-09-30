@@ -1,221 +1,168 @@
 import React from 'react';
 import './App.css';
 
-const projects = [
+const aiProjects = [
+  {
+    name: 'goose',
+    kind: 'AI agent',
+    lang: 'Rust',
+    href: 'https://github.com/aaif-goose/goose',
+    description: 'Open-source agent with a desktop app, CLI, and API. I fixed streaming for some providers and got the agent loop running on wasm32.',
+  },
+  {
+    name: 'Mesh LLM',
+    kind: 'Shared inference',
+    lang: 'Rust',
+    href: 'https://github.com/Mesh-LLM/mesh-llm',
+    description: 'Pools GPUs across machines to serve models. I built the Lightning payments, so people who share compute get paid.',
+  },
+  {
+    name: 'exllamav3',
+    kind: 'Local inference',
+    lang: 'Python',
+    href: 'https://github.com/turboderp-org/exllamav3',
+    description: 'Fast inference for quantized models on consumer GPUs. I sent patches for DFlash speculative decoding and new models.',
+  },
+  {
+    name: 'bwen',
+    kind: 'Fine-tuning',
+    lang: 'Python',
+    href: 'https://github.com/benthecarman/bwen',
+    description: 'Fine-tunes a small model to write like you, trained only on your real tweets with no synthetic data. I published a 14B model trained on mine.',
+  },
+];
+
+const bitcoinProjects = [
   {
     name: 'LDK Server',
-    eyebrow: 'Current focus',
-    description: 'A ready-to-run, API-first Lightning node built on LDK Node, with a language-agnostic gRPC interface.',
+    kind: 'Lightning node',
+    lang: 'Rust',
     href: 'https://github.com/lightningdevkit/ldk-server',
-    tags: ['Rust', 'Lightning', 'gRPC'],
-    tone: 'orange',
+    description: 'A Lightning node you run as a daemon and drive over gRPC. My main project at Spiral.',
   },
   {
     name: 'Lightning Dev Kit',
-    eyebrow: 'Contributor',
-    description: 'Modular, production-grade libraries for building custom Lightning wallets, nodes, and services.',
+    kind: 'Library',
+    lang: 'Rust',
     href: 'https://github.com/lightningdevkit/rust-lightning',
-    tags: ['Rust', 'Open source', 'Protocol'],
-    tone: 'gold',
-  },
-  {
-    name: 'Mutinynet',
-    eyebrow: 'Bitcoin playground',
-    description: 'A public custom signet with 30-second blocks, a faucet, Lightning infrastructure, and experimental soft forks.',
-    href: 'https://mutinynet.com/',
-    tags: ['Signet', 'Lightning', 'Covenants'],
-    tone: 'blue',
+    description: 'Rust libraries for building Lightning wallets and nodes.',
   },
   {
     name: 'Mutiny Wallet',
-    eyebrow: 'Co-founder · CTO',
-    description: 'A self-custodial, web-first Lightning wallet that pushed private payments and nodes in the browser forward.',
+    kind: 'Wallet',
+    lang: 'Rust',
     href: 'https://github.com/MutinyWallet/mutiny-node',
-    tags: ['Lightning', 'WASM', 'Privacy'],
-    tone: 'purple',
+    description: 'A self-custodial Lightning wallet that ran a full node in a browser tab. I co-founded it and was CTO.',
+  },
+  {
+    name: 'Mutinynet',
+    kind: 'Test network',
+    href: 'https://mutinynet.com/',
+    description: 'A public signet with 30-second blocks and soft forks to try out.',
   },
   {
     name: 'NWC for LND',
-    eyebrow: 'Implementation',
-    description: 'An LND bridge implementing the Nostr Wallet Connect protocol for programmable payments in Nostr applications.',
+    kind: 'Nostr',
+    lang: 'Rust',
     href: 'https://github.com/benthecarman/nostr-wallet-connect-lnd',
-    tags: ['Nostr', 'Lightning', 'Rust'],
-    tone: 'pink',
+    description: 'Nostr Wallet Connect for LND nodes.',
   },
   {
     name: 'bitcoin-s',
-    eyebrow: 'Contributor',
-    description: 'A feature-rich Bitcoin and Lightning toolkit for JVM applications, and an important part of my early open-source work.',
+    kind: 'Toolkit',
+    lang: 'Scala',
     href: 'https://github.com/bitcoin-s/bitcoin-s',
-    tags: ['Scala', 'Bitcoin', 'DLCs'],
-    tone: 'green',
+    description: 'A Bitcoin library for the JVM, and where I started, writing DLC code.',
   },
 ];
 
-const history = [
+const socials = [
   {
-    period: '2025 — now',
-    title: 'Bitcoin & Lightning developer, Spiral',
-    copy: 'Working on Lightning Dev Kit and LDK-related infrastructure, including LDK Server.',
-    href: 'https://spiral.xyz/',
-  },
-  {
-    period: '2024 — 2025',
-    title: 'Covenant research, Taproot Wizards',
-    copy: 'Explored new Bitcoin covenant designs and what they could unlock for wallets, scaling, and self-custody.',
-    href: 'https://taprootwizards.com/',
-  },
-  {
-    period: '2023 — 2024',
-    title: 'Co-founder & CTO, Mutiny Wallet',
-    copy: 'Built an open-source, self-custodial Lightning wallet that ran a node directly in the browser.',
-    href: 'https://blog.mutinywallet.com/introducing-mutiny/',
-  },
-  {
-    period: '2021 — 2023',
-    title: 'Co-founder, The Bitcoin Company',
-    copy: 'Helped build a bitcoin-first rewards and payments company after working on bitcoin-s and DLC tooling at Suredbits.',
-    href: 'https://github.com/TheBitcoinCompany',
-  },
-  {
-    period: 'Since 2018',
-    title: 'Open-source Bitcoin contributor',
-    copy: 'Contributions span Bitcoin Core, Lightning, coinjoin privacy, DLCs, Nostr, Fedimint, and developer tools.',
+    label: 'GitHub',
     href: 'https://github.com/benthecarman',
+    icon: 'M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3',
+  },
+  {
+    label: 'Twitter',
+    href: 'https://x.com/benthecarman',
+    icon: 'M23.95 4.57a10 10 0 0 1-2.82.78 4.96 4.96 0 0 0 2.16-2.72c-.95.55-2 .96-3.13 1.18a4.92 4.92 0 0 0-8.38 4.48A13.94 13.94 0 0 1 1.64 3.16a4.82 4.82 0 0 0-.67 2.48c0 1.71.87 3.21 2.19 4.1a4.9 4.9 0 0 1-2.23-.62v.06a4.92 4.92 0 0 0 3.95 4.83 5 5 0 0 1-2.21.08 4.94 4.94 0 0 0 4.6 3.42 9.87 9.87 0 0 1-6.1 2.1c-.39 0-.78-.02-1.17-.06a14 14 0 0 0 7.56 2.21c9.05 0 14-7.5 14-13.99l-.01-.63A9.94 9.94 0 0 0 24 4.59z',
   },
 ];
 
-function Arrow() {
+function External({ href, children, className }) {
+  if (href.startsWith('mailto:')) {
+    return <a className={className} href={href}>{children}</a>;
+  }
   return (
-    <svg viewBox="0 0 20 20" aria-hidden="true">
-      <path d="M4 10h11M11 5l5 5-5 5" />
-    </svg>
+    <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+  );
+}
+
+function ProjectGrid({ id, label, projects, size }) {
+  return (
+    <section className="projects" aria-labelledby={id}>
+      <h2 className="group-label" id={id}>{label}</h2>
+      <ul className={`grid grid-${size}`}>
+        {projects.map(project => (
+          <li key={project.name}>
+            <External className="project" href={project.href}>
+              <span className="kind">{[project.kind, project.lang].filter(Boolean).join(' · ')}</span>
+              <span className="project-name">
+                {project.name}<span className="arrow" aria-hidden="true">↗</span>
+              </span>
+              <span className="project-description">{project.description}</span>
+            </External>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
 function App() {
   return (
-    <div className="site-shell">
-      <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Ben Carman, home">
-          <span className="wordmark-mark">₿</span>
-          <span>Ben Carman</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#history">History</a>
+    <div className="page">
+      <header className="masthead">
+        <span className="name">
+          <img src="/images/me-bear.png" alt="" width="36" height="36" />
+          Ben Carman
+        </span>
+        <nav aria-label="Elsewhere">
+          {socials.map(social => (
+            <External href={social.href} key={social.label}>
+              <svg className="icon" viewBox="0 0 24 24" role="img" aria-label={social.label}>
+                <path d={social.icon} />
+              </svg>
+            </External>
+          ))}
         </nav>
-        <a className="header-link" href="https://github.com/benthecarman" target="_blank" rel="noopener noreferrer">
-          GitHub <Arrow />
-        </a>
       </header>
 
-      <main id="top">
-        <section className="hero" aria-labelledby="hero-title">
-          <div className="hero-copy">
-            <p className="kicker"><span className="status-dot" /> Bitcoin developer in Austin, Texas</p>
-            <h1 id="hero-title">Building tools for <em>bitcoin in motion.</em></h1>
-            <p className="hero-lede">
-              I’m Ben Carman, a Bitcoin and Lightning developer at <a href="https://spiral.xyz/" target="_blank" rel="noopener noreferrer">Spiral</a>. I build open-source software that makes self-custodial payments practical.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#work">Explore my work <Arrow /></a>
-              <a className="button button-ghost" href="mailto:benthecarman@live.com">Get in touch</a>
-            </div>
-          </div>
+      <main>
+        <div className="intro">
+          <p className="lede">
+            Building freedom&nbsp;tech with Bitcoin and open-source AI.
+          </p>
+        </div>
 
-          <div className="portrait-wrap" aria-label="Illustration of Ben riding a bear">
-            <div className="portrait-grid" />
-            <span className="orbit orbit-one" />
-            <span className="orbit orbit-two" />
-            <img src="/images/me-bear.png" alt="Ben Carman riding a bear, holding a bitcoin" />
-            <div className="portrait-label"><span>Currently building</span><strong>LDK Server</strong></div>
-          </div>
-        </section>
+        <ProjectGrid id="ai" label="AI" projects={aiProjects} size="large" />
+        <ProjectGrid id="bitcoin" label="Bitcoin" projects={bitcoinProjects} size="small" />
 
-        <section className="ticker" aria-label="Areas of focus">
-          <span>Bitcoin</span><i>✦</i><span>Lightning</span><i>✦</i><span>Privacy</span><i>✦</i><span>Open source</span><i>✦</i><span>Rust</span>
-        </section>
-
-        <section className="section" id="work" aria-labelledby="work-title">
-          <div className="section-heading">
-            <div>
-              <p className="kicker">Selected open source</p>
-              <h2 id="work-title">Things I’ve built<br />and contributed to.</h2>
-            </div>
-            <p>My work sits at the intersection of payments, privacy, and developer infrastructure. The common thread: making bitcoin more useful.</p>
-          </div>
-
-          <div className="project-grid">
-            {projects.map((project, index) => (
-              <a className={`project-card ${project.tone}`} href={project.href} target="_blank" rel="noopener noreferrer" key={project.name}>
-                <div className="project-topline">
-                  <span className="project-number">0{index + 1}</span>
-                  <span className="project-arrow"><Arrow /></span>
-                </div>
-                <p className="project-eyebrow">{project.eyebrow}</p>
-                <h3>{project.name}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="tag-list">
-                  {project.tags.map(tag => <span key={tag}>{tag}</span>)}
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        <section className="about-section" id="about" aria-labelledby="about-title">
-          <div className="about-statement">
-            <p className="kicker">Why I build</p>
-            <h2 id="about-title">Bitcoin should be more than something you hold.</h2>
-          </div>
-          <div className="about-copy">
-            <p>I care about the hard, unglamorous infrastructure that lets people use bitcoin privately, directly, and without handing control to an intermediary.</p>
-            <p>That has taken me from Bitcoin Core and DLCs to coinjoins, a Lightning node in the browser, and now developer-friendly infrastructure at Spiral.</p>
-            <a className="text-link" href="https://github.com/benthecarman" target="_blank" rel="noopener noreferrer">Follow the commits <Arrow /></a>
-          </div>
-        </section>
-
-        <section className="section history-section" id="history" aria-labelledby="history-title">
-          <div className="section-heading history-heading">
-            <div>
-              <p className="kicker">The path here</p>
-              <h2 id="history-title">A short history.</h2>
-            </div>
-          </div>
-          <div className="history-list">
-            {history.map(item => (
-              <a className="history-row" href={item.href} target="_blank" rel="noopener noreferrer" key={item.period}>
-                <span className="history-period">{item.period}</span>
-                <span className="history-detail"><strong>{item.title}</strong><span>{item.copy}</span></span>
-                <span className="history-arrow"><Arrow /></span>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        <section className="community">
-          <p className="kicker">Community</p>
-          <h2>Code is better when we<br />work in the open.</h2>
-          <p>I’ve helped organize Austin BitDevs and regularly speak about Bitcoin, Lightning, privacy, and the lessons learned while building wallets.</p>
-          <a className="button button-light" href="https://austinbitdevs.com/" target="_blank" rel="noopener noreferrer">Austin BitDevs <Arrow /></a>
+        <section className="about" aria-label="Background">
+          <p>
+            Before Spiral I co-founded Mutiny Wallet and The Bitcoin Company, researched covenants
+            at <External href="https://taprootwizards.com/">Taproot Wizards</External>, and
+            wrote DLC code at Suredbits. Most of what I write now is Rust.
+          </p>
         </section>
       </main>
 
-      <footer>
-        <div className="footer-cta">
-          <p className="kicker">Say hello</p>
-          <a href="mailto:benthecarman@live.com">Let’s make bitcoin useful.<Arrow /></a>
-        </div>
-        <div className="footer-bottom">
+      <footer className="footer">
+        <p className="contact">
+          Say hi at <External href="mailto:benthecarman@live.com">benthecarman@live.com</External>
+        </p>
+        <div className="footer-meta">
           <span>© {new Date().getFullYear()} Ben Carman</span>
-          <div className="social-links">
-            <a href="https://github.com/benthecarman" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://x.com/benthecarman" target="_blank" rel="noopener noreferrer">X / Twitter</a>
-            <a href="https://njump.me/e1ff3bfdd4e40315959b08b4fcc8245eaa514637e1d4ec2ae166b743341be1af" target="_blank" rel="noopener noreferrer">Nostr</a>
-            <a href="https://keybase.io/benthecarman" target="_blank" rel="noopener noreferrer">Keybase</a>
-          </div>
         </div>
       </footer>
     </div>
